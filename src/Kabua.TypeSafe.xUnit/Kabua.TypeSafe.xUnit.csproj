@@ -7,11 +7,11 @@
     <Nullable>enable</Nullable>
     <IsPackable>True</IsPackable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Title>Type Safe xUnit Tests</Title>
-    <Description>Adds the ability to 
+    <Title>Create Type Safe xUnit Tests</Title>
+    <Description>Adds the ability to: 
 1) Create type safe objects, using POCO objects, for InlineData and MemberData attributes. Thus allowing unit tests to be first-class citizens.
 2) Control all aspects of the test name format.</Description>
-    <Copyright>Copyright © Kabua 2023</Copyright>
+    <Copyright>Copyright © 2023 Kabua</Copyright>
     <PackageProjectUrl>https://github.com/kabua/typesafe.xunit</PackageProjectUrl>
     <PackageIcon>logo-type-safe-xunit-235.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
@@ -44,6 +44,10 @@
 
   <ItemGroup>
     <None Include="..\..\logo-type-safe-xunit-235.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\LICENSE" Link="LICENSE">
       <Pack>True</Pack>
       <PackagePath>\</PackagePath>
     </None>
