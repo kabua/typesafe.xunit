@@ -1,7 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Reflection;
 using FluentAssertions;
-using Kabua.TypeSafe.xUnit.Sdk;
 // ReSharper disable MemberCanBePrivate.Local
 
 namespace Kabua.TypeSafe.xUnit.UnitTests;

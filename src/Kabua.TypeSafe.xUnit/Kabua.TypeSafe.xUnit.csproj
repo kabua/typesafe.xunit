@@ -5,17 +5,63 @@
     <TargetFrameworks>net462;net6</TargetFrameworks>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <IsPackable>True</IsPackable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Type Safe xUnit Tests</Title>
+    <Description>Adds the ability to 
+1) Create type safe objects, using POCO objects, for InlineData and MemberData attributes. Thus allowing unit tests to be first-class citizens.
+2) Control all aspects of the test name format.</Description>
+    <Copyright>Copyright © Kabua 2023</Copyright>
+    <PackageProjectUrl>https://github.com/kabua/typesafe.xunit</PackageProjectUrl>
+    <PackageIcon>logo-type-safe-xunit-235.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/kabua/typesafe.xunit</RepositoryUrl>
+    <PackageTags>xunit;unit test;unit-tests;unit testing;unit-testing;POCO;type safe;type-safe;inlinedata;inline-data;Inline Data;InlineData;member data;member-data;MemberData</PackageTags>
+    <PackageReleaseNotes>This is the initial release of the type safe extentions to xunit, including over 50 unit tests showing how to use these new features.</PackageReleaseNotes>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <IncludeSymbols>True</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <IsPublishable>True</IsPublishable>
     <NoWarn>1701;1702;IDE0011</NoWarn>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <NoWarn>1701;1702;IDE0011</NoWarn>
+  <PropertyGroup>
+    <!-- Publish the repository URL in the built .nupkg (in the NuSpec <Repository> element) -->
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+
+    <!-- Embed source files that are not tracked by the source control manager in the PDB -->
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+
+    <!-- Recommended: Embed symbols containing Source Link in the main file (exe/dll) -->
+    <DebugType>embedded</DebugType>
+
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+
+    <Authors>https://github.com/kabua</Authors>
+
+    <Company>https://github.com/kabua</Company>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Include="..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\logo-type-safe-xunit-235.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="8.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="xunit.assert" Version="2.6.1" />
     <PackageReference Include="xunit.core" Version="2.6.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3">
@@ -23,5 +69,4 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
   </ItemGroup>
-
 </Project>

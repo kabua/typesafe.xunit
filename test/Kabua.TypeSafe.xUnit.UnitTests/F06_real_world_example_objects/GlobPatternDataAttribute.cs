@@ -1,5 +1,4 @@
 ﻿using System.Reflection;
-using Kabua.TypeSafe.xUnit.Sdk;
 using Kabua.TypeSafe.xUnit.UnitTests.F04_MemberTestData_real_world_example_objects;
 
 namespace Kabua.TypeSafe.xUnit.UnitTests.F06_real_world_example_objects;

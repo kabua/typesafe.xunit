@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using Xunit.Sdk;
 
-namespace Kabua.TypeSafe.xUnit.Sdk;
+namespace Kabua.TypeSafe.xUnit;
 
 /// <summary>
 /// Provides a data source for a object theory, with the object coming from inline values.
