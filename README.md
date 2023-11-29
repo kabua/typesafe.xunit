@@ -1,4 +1,4 @@
-![Logo](logo-type-safe-xunit-235.png)
+![Logo](https://raw.githubusercontent.com/kabua/typesafe.xunit/main/logo-type-safe-xunit-235.png?raw=true, "Logo")
 
 # Type Safe xUnit
 
