@@ -1,5 +1,4 @@
 ﻿using System.Reflection;
-using Kabua.TypeSafe.xUnit.Sdk;
 using Kabua.TypeSafe.xUnit.UnitTests.F04_MemberTestData_real_world_example_objects;
 
 namespace Kabua.TypeSafe.xUnit.UnitTests.F07_Combined_real_world_example_objects;
@@ -7,19 +6,15 @@ namespace Kabua.TypeSafe.xUnit.UnitTests.F07_Combined_real_world_example_objects
 [AttributeUsage(AttributeTargets.Method, AllowMultiple = true)]
 public sealed class BuilderTestDataAttribute : InlineObjectAttribute
 {
-    public BuilderTestDataAttribute(int testId, string pattern)
-        : this(testId, pattern, pattern)
+    public BuilderTestDataAttribute(string pattern)
+        : this(pattern, pattern)
     {
     }
 
-    public BuilderTestDataAttribute(int testId, string pattern, string expectedValue)
-        : this(testId, pattern, new[] { expectedValue })
+    public BuilderTestDataAttribute(string pattern, string expectedValue)
+        : this(pattern, new[] { expectedValue })
     {
     }
-
-    public BuilderTestDataAttribute(int testId, string pattern, params string[] expectedValues)
-        : this(pattern, expectedValues)
-        => TestId = testId;
 
     public BuilderTestDataAttribute(string pattern, params string[] expectedValues)
     {
@@ -28,8 +23,6 @@ public sealed class BuilderTestDataAttribute : InlineObjectAttribute
     }
 
     public bool UsePatternSize { get; set; }
-
-    public int? TestId { get; }
 
     public string Pattern { get; }
 
